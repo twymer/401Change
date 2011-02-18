@@ -1,0 +1,25 @@
+%html
+  %head
+    %title Add a Change Agent to 401Change
+
+#header
+  %h1 Facilitating positive change in the world
+#content
+  %form
+    %ul
+    %li
+      %label{:for=>"name"} Who Are They?
+      %input{:type=>"text",:name=>"name", :id=>"name"}
+    %li
+      %label{:for=>"url"} Where Are They On The Web?
+      %input{:type=>"text",:name=>"url", :id=>"url"}
+    %li
+      %label{:for=>"they_do"} What Do They Do?
+      %input{:type=>"text",:name=>"they_do", :id=>"they_do"}
+    %li
+      %label{:for=>"support_them"} Why Should Someone Support Them?
+      %input{:type=>"text",:name=>"support_them", :id=>"support_them"}
+    %li
+      
+      %label &nbsp;
+      %input{:type=>"submit", :value=>"Add Change Agent"}
