@@ -1,0 +1,20 @@
+%html
+  %head
+    %title Add a Change Agent to 401Change
+
+#header
+  %h1 Facilitating positive change in the world
+#content
+  %form{:method=>"post"}
+    %ul
+    %li
+      %label{:for=>"name"} Who Are They?
+      %input{:type=>"text",:name=>"name", :id=>"name"}
+      %span Please provide a name for this Change Agent.
+    %li
+      %label{:for=>"purpose"} What Do They Do?
+      %input{:type=>"text",:name=>"purpose", :id=>"purpose"}
+      %span Please provide a short description of what this change agent does.
+    %li
+      %label &nbsp;
+      %input{:type=>"submit", :value=>"Suggest Cause"}
