@@ -1,7 +1,8 @@
-Feature: Add a Cause
-  In order to publicize a cause
+@nyi
+Feature: Become a Change Agent
+  In order to share the things I do to change the world
   As a visitor
-  I want to be able to add a cause
+  I want to be become a change agent
 
 Scenario: Navigating to the Add Cause Page
   Given I am on the home page
