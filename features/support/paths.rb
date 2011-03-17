@@ -18,6 +18,8 @@ module NavigationHelpers
 
       when /the share a cause\s?page/
         '/causes/add'
+      when /the about change agents page/
+        '/change_agents/are'
 
       # Add more mappings here.
       # Here is an example that pulls values out of the Regexp:
