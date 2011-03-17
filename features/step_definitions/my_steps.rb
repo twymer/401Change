@@ -5,3 +5,8 @@ end
 Then /^(\w+) should have an error message$/ do
   pending # express the regexp above with the code you wish you had
 end
+
+
+And /^I should see a description$/ do
+  Then 'I should see "description"'
+end

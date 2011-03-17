@@ -11,7 +11,9 @@ class FourOhOneChange < Sinatra::Base
   get '/causes/add' do
     haml :'causes/add'
   end
-
+  get '/change_agents/are' do
+    haml :'change_agents/are'
+  end
 end
 
 

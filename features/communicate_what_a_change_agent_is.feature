@@ -11,4 +11,5 @@ Feature: Discover what a Change Agent Is
     Given I am on the home page
     When I follow "What else do they do?"
     Then I should be on the about change agents page
+    And I should see a description
 
