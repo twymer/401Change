@@ -9,13 +9,14 @@ Scenario: Navigating to the Add Cause Page
   Then I should be on the become a change agent page
 
 
-@nyi
+
 Scenario: Adding a Change Agent Sad Path
-  Given I am on the share a cause page
-  When I press "Suggest Cause"
-  Then I am on the share a cause page
-  And 0 causes should exist
-  And name should have an error message
+  Given I am on the become a change agent page
+  When I press "Complete Registration"
+  Then I am on the become a change agent page
+  And 0 change agents should exist
+  And nickname should have an error message
+  And email should have an error message
 
 @nyi
 Scenario: Adding a Change Agent With Everything
