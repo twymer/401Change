@@ -6,7 +6,7 @@ Feature: Discover what a Change Agent Is
   Scenario: Change agent overview
     Given I am on the home page
     Then I should see "What Are Change Agents?"
-
+  @nyi
   Scenario: Seeking more information
     Given I am on the home page
     When I follow "what else change agents do"
