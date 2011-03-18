@@ -16,8 +16,8 @@ module NavigationHelpers
       when /change agent added\s?page/
         '/change_agent_added'
 
-      when /the share a cause\s?page/
-        '/causes/add'
+      when /the become a change agent \s?page/
+        '/change_agents/join'
       when /the about change agents page/
         '/change_agents/are'
 

@@ -9,7 +9,7 @@ Feature: Discover what a Change Agent Is
 
   Scenario: Seeking more information
     Given I am on the home page
-    When I follow "What else do they do?"
+    When I follow "what else change agents do"
     Then I should be on the about change agents page
     And I should see a description
 

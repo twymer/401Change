@@ -4,7 +4,7 @@ gem "sinatra"
 gem "haml"
 gem "dm-core"
 gem "dm-migrations"
-
+gem "rdiscount"
 
 # testing
 gem "dm-sqlite-adapter"
