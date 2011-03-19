@@ -22,7 +22,7 @@ end
 
 When /^properly fill out the registration$/ do
   fill_in('email', :with => 'john@denver.com')
-  fill_in('nickname', :with => 'John Denver')
+  fill_in('name', :with => 'John Denver')
 end
 
 Then /^I should get told that registration failed$/ do

@@ -13,6 +13,10 @@ describe ChangeAgent do
   it 'should be valid if name and email are valid' do
     ChangeAgent.valid?({:name => "Superman", :email => "clark@kent.com"}).should == true
   end
+
+  it 'should be invalid if name is empty string' do
+    ChangeAgent.valid?({:name => "", :email => "forgotmyname@gmail.com"}).should == false
+  end
 end
 
 

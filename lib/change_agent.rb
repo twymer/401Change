@@ -4,6 +4,6 @@ class ChangeAgent
   end
 
   def self.valid?(form_values)
-    !form_values.empty?
+    !form_values.empty? && form_values[:name] != ""
   end
 end
