@@ -5,7 +5,7 @@ Then /^(\w+) should have an error message$/ do | field |
   end
 end
 
-Then /^(\d+) change agents should exist$/ do |number_of_agents|
+Then /^(\d+) change agents should exist$/ do | number_of_agents |
   ChangeAgent.count.should == number_of_agents.to_i
 end
 
@@ -29,4 +29,16 @@ end
 Then /^I should get told that registration failed$/ do
   page.should_not have_selector('#registration_succeeded')
   page.should have_selector('#registration_failed')
+end
+
+When /^I register with an invalid email$/ do
+  fill_in('email', :with => '')
+  fill_in('name', :with => 'What is email')
+  click_button("Complete Registration")
+end
+
+And /^(\w+) should not have an error message$/ do | field |
+  with_scope('#' + field) do
+    page.should_not have_selector('.error')
+  end
 end

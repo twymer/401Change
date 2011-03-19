@@ -25,4 +25,19 @@ describe Page do
     page = Page.new({})
     page.has_errors?.should == false
   end
+
+  it "should have name error when initialized with a name error" do
+    page = Page.new({:errors => {:name => "Empty name."}})
+    page.has_error?(:name).should == true
+  end
+
+  it "should not have name error when initialized correctly" do
+    page = Page.new({:errors => {}})
+    page.has_error?(:name).should == false
+  end
+
+  it "should have a email error when initialized with an email error" do
+    page = Page.new({:errors => {:email => "Invalid email."}})
+    page.has_error?(:email).should == true
+  end
 end

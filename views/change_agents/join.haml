@@ -1,14 +1,15 @@
 -if @page.has_errors?
   #registration_failed
 %form
-  %ul{:id=>"name"}
-    %li
+  %ul
+    %li{:id=>"name"}
       %label{:for=>"name"}Your Name:
       %input{:type=>"text", :name=>"name"}
-    %li{:class => 'error'}
-  %ul{:id=>"email"}
-    %li{:for=>"email"}Email:
-    %input{:type=>"text", :name=>"email"}
-    %li{:class => 'error'}
+      -if @page.has_error?(:name)
+        %span{:class => 'error'}
+    %li{:id=>"email"}
+      %label{:for=>"email"}Email:
+      %input{:type=>"text", :name=>"email"}
+      %span{:class => 'error'}
     %li
       %input{:type => 'submit', :value => 'Complete Registration'}
