@@ -1,6 +1,14 @@
+#registration_succeeded
+
 %form
-  %input{:type => 'submit', :value => 'Complete Registration'}
-%ul{:id=>"nickname"}
-  %li{:class => 'error'}
-%ul{:id=>"email"}
-  %li{:class => 'error'}
+  %ul{:id=>"nickname"}
+    %li
+      %label{:for=>"nickname"}Your Name:
+      %input{:type=>"text", :name=>"nickname"}
+    %li{:class => 'error'}
+  %ul{:id=>"email"}
+    %li{:for=>"email"}Email:
+    %input{:type=>"text", :name=>"email"}
+    %li{:class => 'error'}
+    %li
+      %input{:type => 'submit', :value => 'Complete Registration'}

@@ -1,4 +1,5 @@
 require 'rubygems'
-require File.join(File.dirname(__FILE__), 'lib/401_change.rb')
+$: << File.expand_path(File.dirname(__FILE__) + '/lib')
+require '401_change'
 
 run FourOhOneChange

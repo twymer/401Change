@@ -9,19 +9,16 @@ Scenario: Navigating to the Become a Change Agent Page
   Then I should be on the become a change agent page
 
 
-@wip
-Scenario: Adding a Change Agent Sad Path
+
+Scenario: Adding a Change without email
   Given I am on the become a change agent page
   When I press "Complete Registration"
-  Then I am on the become a change agent page
-  And 0 change agents should exist
-  And nickname should have an error message
-  And email should have an error message
+  Then email should have an error message
+  Then I should get told that registration failed
+  Then 0 change agents should exist
 
-@nyi
+
 Scenario: Adding a Change Agent
-  Given I am on the share a cause page
-  When I fill in "name" with "This great cause"
-  And I press "Suggest Cause"
-  Then I should be on the home page
-  Then I should see "Thank you for adding a Cause!"
+  Given I am on the become a change agent page
+  When properly fill out the registration
+  Then I should get confirmation that registration succeeded

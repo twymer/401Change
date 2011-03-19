@@ -13,3 +13,19 @@ end
 Then /^I should see a description$/ do
   Then 'I should see "description"'
 end
+
+Then /^I should get confirmation that registration succeeded$/ do
+  page.should have_selector('#registration_succeeded')
+  page.should_not have_selector('.error')
+end
+
+
+When /^properly fill out the registration$/ do
+  fill_in('email', :with => 'john@denver.com')
+  fill_in('nickname', :with => 'John Denver')
+end
+
+Then /^I should get told that registration failed$/ do
+  page.should_not have_selector('#registration_succeeded')
+  page.should have_selector('#registration_failed')
+end

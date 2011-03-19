@@ -2,7 +2,7 @@ require 'sinatra/base'
 require 'haml'
 require 'dm-core'
 require 'dm-migrations'
-
+require 'services'
 
 class FourOhOneChange < Sinatra::Base
   get '/' do
@@ -14,7 +14,7 @@ class FourOhOneChange < Sinatra::Base
   end
 
   get '/change_agents/join' do
-    haml :'change_agents/join'
+    haml ChangeAgentService.handle(params)
   end
 
   get '/change_agents/are' do
