@@ -1,9 +1,9 @@
 module ChangeAgentService
     def self.handle(params)
-      if params.empty? || !ChangeAgent.valid?(params)
-        :'change_agents/join'
-      else
+      if ChangeAgent.valid?(params)
         :'change_agents/success'
+      else
+        :'change_agents/join'
       end
     end
 end

@@ -4,10 +4,6 @@ class ChangeAgent
   end
 
   def self.valid?(form_values)
-    if form_values.empty?
-      return false
-    else
-      return true
-    end
+    !form_values.empty?
   end
 end
