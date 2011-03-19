@@ -20,4 +20,9 @@ describe Page do
     page = Page.new({:errors => {}})
     page.has_errors?.should == false
   end
+
+  it "should not have errors when initialized with no errors object" do
+    page = Page.new({})
+    page.has_errors?.should == false
+  end
 end

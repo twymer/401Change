@@ -1,7 +1,7 @@
 class Page
   def initialize(page_params)
     @view = page_params[:view]
-    @errors = page_params[:errors]
+    @errors = page_params[:errors] || {}
   end
 
   def view

@@ -9,6 +9,6 @@ module ChangeAgentService
       end
     end
   def self.handle(params)
-    Page.new(:view=>get_view_name(params))
+    Page.new(:view=>get_view_name(params), :errors=>ChangeAgent.get_errors_with_form(params))
   end
 end
