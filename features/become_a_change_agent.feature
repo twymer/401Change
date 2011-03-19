@@ -3,7 +3,7 @@ Feature: Become a Change Agent
   As a visitor
   I want to be become a change agent
 
-Scenario: Navigating to the Add Cause Page
+Scenario: Navigating to the Become a Change Agent Page
   Given I am on the home page
   When I follow "Become a change agent"
   Then I should be on the become a change agent page
@@ -19,7 +19,7 @@ Scenario: Adding a Change Agent Sad Path
   And email should have an error message
 
 @nyi
-Scenario: Adding a Change Agent With Everything
+Scenario: Adding a Change Agent
   Given I am on the share a cause page
   When I fill in "name" with "This great cause"
   And I press "Suggest Cause"

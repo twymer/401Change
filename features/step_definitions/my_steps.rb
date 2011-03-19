@@ -1,12 +1,15 @@
-Then /^(\d+) causes should exist$/ do |total_causes|
-  Cause.count.should == total_causes
+require 'change_agent'
+
+Then /^(\w+) should have an error message$/ do | field |
+  with_scope('#' + field) do
+    page.should have_selector('.error')
+  end
 end
 
-Then /^(\w+) should have an error message$/ do
-  pending # express the regexp above with the code you wish you had
+Then /^(\d+) change agents should exist$/ do |number_of_agents|
+  ChangeAgent.count.should == number_of_agents.to_i
 end
 
-
-And /^I should see a description$/ do
+Then /^I should see a description$/ do
   Then 'I should see "description"'
 end
