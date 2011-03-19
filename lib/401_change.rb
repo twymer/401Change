@@ -14,7 +14,8 @@ class FourOhOneChange < Sinatra::Base
   end
 
   get '/change_agents/join' do
-    haml ChangeAgentService.handle(params)
+    @page = ChangeAgentService.handle(params)
+    haml @page.view
   end
 
   get '/change_agents/are' do
