@@ -1,4 +1,5 @@
 require 'page'
+require 'change_agent'
 
 module ChangeAgentService
     def self.get_view_name(params)

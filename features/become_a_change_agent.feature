@@ -20,5 +20,5 @@ Scenario: Adding a Change without email
 
 Scenario: Adding a Change Agent
   Given I am on the become a change agent page
-  When properly fill out the registration
+  When properly submit the registration
   Then I should get confirmation that registration succeeded

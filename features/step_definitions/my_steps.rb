@@ -1,4 +1,3 @@
-require 'change_agent'
 
 Then /^(\w+) should have an error message$/ do | field |
   with_scope('#' + field) do
@@ -20,9 +19,11 @@ Then /^I should get confirmation that registration succeeded$/ do
 end
 
 
-When /^properly fill out the registration$/ do
+When /^properly submit the registration$/ do
   fill_in('email', :with => 'john@denver.com')
   fill_in('name', :with => 'John Denver')
+  click_button("Complete Registration")
+
 end
 
 Then /^I should get told that registration failed$/ do
