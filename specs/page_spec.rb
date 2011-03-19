@@ -1,43 +1,54 @@
 require 'page'
 
 describe Page do
-  it "should return :view_stuff when the view is initialized with this" do
-    page = Page.new({:view => :view_stuff})
-    page.view.should == :view_stuff
+  describe "getting the view" do
+    it "should return :view_stuff when the view is created with this" do
+      page = Page.new({:view => :view_stuff})
+      page.view.should == :view_stuff
+    end
+
+    it "should return :other_stuff when the view is created with this" do
+      page = Page.new({:view => :other_stuff})
+      page.view.should == :other_stuff
+    end
   end
 
-  it "should return :other_stuff when the view is initialized with this" do
-    page = Page.new({:view => :other_stuff})
-    page.view.should == :other_stuff
+  describe "has no errors" do
+    it "when created with empty errors object" do
+      page = Page.new({:errors => {}})
+      page.has_errors?.should == false
+    end
+
+    it "when created with no errors object" do
+      page = Page.new({})
+      page.has_errors?.should == false
+    end
+
+  end
+  describe "has no specific errors" do
+    it "when created normally" do
+      page = Page.new({:errors => {}})
+      page.has_error?(:name).should == false
+      page.has_error?(:email).should == false
+    end
+
+  end
+  describe "has specific errors" do
+    it "when created with a name error" do
+      page = Page.new({:errors => {:name => "Empty name."}})
+      page.has_error?(:name).should == true
+    end
+    it "when created with an email error" do
+      page = Page.new({:errors => {:email => "Invalid email."}})
+      page.has_error?(:email).should == true
+    end
+  end
+  describe "has general errors" do
+    it "when created with any error" do
+      page = Page.new({:errors => {:email => "Invalid email."}})
+      page.has_errors?.should == true
+    end
   end
 
-  it "should have errors when initialized with an error" do
-    page = Page.new({:errors => {:email => "Invalid email."}})
-    page.has_errors?.should == true
-  end
 
-  it "should not have errors when initialized with no errors" do
-    page = Page.new({:errors => {}})
-    page.has_errors?.should == false
-  end
-
-  it "should not have errors when initialized with no errors object" do
-    page = Page.new({})
-    page.has_errors?.should == false
-  end
-
-  it "should have name error when initialized with a name error" do
-    page = Page.new({:errors => {:name => "Empty name."}})
-    page.has_error?(:name).should == true
-  end
-
-  it "should not have name error when initialized correctly" do
-    page = Page.new({:errors => {}})
-    page.has_error?(:name).should == false
-  end
-
-  it "should have a email error when initialized with an email error" do
-    page = Page.new({:errors => {:email => "Invalid email."}})
-    page.has_error?(:email).should == true
-  end
 end
