@@ -10,7 +10,6 @@ Scenario:
   Given I am on the find a need page
   Then I should see all the needs
 
-@wip1
 Scenario: 
   Given the following needs
   	| description       |

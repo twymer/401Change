@@ -30,6 +30,11 @@ class FourOhOneChange < Sinatra::Base
     @needs = Need.find(:all)
     haml :'find_a_need'
   end
+
+  get '/share_an_action' do
+    @page = ShareAnActionService.handle(params)
+    haml @page.view
+  end
 end
 
 
