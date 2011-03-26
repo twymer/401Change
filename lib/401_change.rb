@@ -35,6 +35,10 @@ class FourOhOneChange < Sinatra::Base
     @page = ShareAnActionService.handle(params)
     haml @page.view
   end
+  
+  get '/js/*' do
+  
+  end
 end
 
 
