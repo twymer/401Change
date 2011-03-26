@@ -1,3 +1,4 @@
+db/config.yml
 .idea/*
 .bundle/config
 .DS_Store
