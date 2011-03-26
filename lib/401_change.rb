@@ -22,7 +22,8 @@ class FourOhOneChange < Sinatra::Base
   end
   
   get '/share_a_need' do
-    haml :'share_a_need'
+    @page = ShareANeedService.handle(params)
+    haml @page.view
   end
 
   get '/find_a_need' do
