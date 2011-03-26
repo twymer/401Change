@@ -25,4 +25,8 @@ class FourOhOneChange < Sinatra::Base
   get '/share_a_need' do
     haml :'share_a_need'
   end
+
+  get '/find_a_need' do
+    haml :'find_a_need'
+  end
 end
