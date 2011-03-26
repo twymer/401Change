@@ -7,6 +7,8 @@
 
 %ul#needs
 - @needs.each do |need|
-  %li= need.description
+  %li
+    %a{:href => "/share_an_action/#{need.id}"} I Helped!
+    #{need.description}
 
 %script{:type => "text/javascript",:src  => "/js/need_filter.js"}

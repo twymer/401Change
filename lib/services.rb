@@ -27,10 +27,10 @@ end
 
 module ShareAnActionService
   def self.handle(params)
+    page = ShareActionPage.new(:view=> :'actions/share', :errors=> Action.get_errors_with_form(params))    
     if(Action.valid?(params)) 
-      Action.create(params)  
+      page.action = Action.create(params)  
     end
-
-    Page.new(:view=> :'actions/share', :errors=> Action.get_errors_with_form(params))    
+    page
   end
 end
