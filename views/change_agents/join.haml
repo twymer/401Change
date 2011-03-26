@@ -2,12 +2,12 @@
   #registration_failed
 %form
   %ul
-    %li{:id=>"name"}
+    %li#name
       %label{:for=>"name"}Your Name:
       %input{:type=>"text", :name=>"name"}
       -if @page.has_error?(:name)
         %span{:class => 'error'}
-    %li{:id=>"email"}
+    %li#email
       %label{:for=>"email"}Email:
       %input{:type=>"text", :name=>"email"}
       %span{:class => 'error'}
