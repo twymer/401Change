@@ -33,6 +33,10 @@ describe ShareANeedService do
       ShareANeedService.handle({:description =>"Yarp"})
     end
   
+    it "Shoyld not save a need when the need is invalid" do
+      Need.should_not_receive(:create)
+      ShareANeedService.handle({})
+    end
     it "should have an error when the need is invalid" do
       Need.stub!(:get_errors_with_form).and_return({:description => "aaeeerooosmitherror"})
       Page.should_receive(:new).with({:errors => {:description => "aaeeerooosmitherror"}, :view => :"needs/share"})

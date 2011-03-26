@@ -26,7 +26,10 @@ module ShareANeedService
   end
 
   def self.handle(params)
-    Need.create(params)
+    if(Need.valid?(params)) 
+      Need.create(params)  
+    end
+
     Page.new(:view=> get_view_name(params), :errors=> Need.get_errors_with_form(params))    
   end
 end
