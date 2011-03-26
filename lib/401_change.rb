@@ -27,6 +27,8 @@ class FourOhOneChange < Sinatra::Base
   end
 
   get '/find_a_need' do
+    # here is the fake database - this is where we will be accessing the db and getting the info
+    @needs_array = ["feed the homeless"]
     haml :'find_a_need'
   end
 end
