@@ -10,7 +10,7 @@ Then /^(\d+) change agents should exist$/ do | number_of_agents |
 end
 
 Then /^I should see a description$/ do
-  Then 'I should see "description"'
+  page.should have_selector('#description')
 end
 
 Then /^I should get confirmation that registration succeeded$/ do

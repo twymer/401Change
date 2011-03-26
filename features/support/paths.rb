@@ -20,6 +20,8 @@ module NavigationHelpers
         '/change_agents/join'
       when /the about change agents page/
         '/change_agents/are'
+      when /share a need/
+        '/share_a_need'
 
       # Add more mappings here.
       # Here is an example that pulls values out of the Regexp:
