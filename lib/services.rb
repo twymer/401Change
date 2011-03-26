@@ -27,6 +27,6 @@ module ShareANeedService
 
   def self.handle(params)
     Need.create(params)
-    Page.new(:view=> get_view_name(params), :errors=> {})    
+    Page.new(:view=> get_view_name(params), :errors=> Need.get_errors_with_form(params))    
   end
 end
