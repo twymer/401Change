@@ -3,4 +3,4 @@
 %ul#needs
 - @needs = Need.find(:all)
 - @needs.each do |need|
-  %li= need
+  %li= need.description

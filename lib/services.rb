@@ -19,9 +19,9 @@ module ShareANeedService
 
   def self.get_view_name(params)
     if(Need.valid?(params))
-      :'success'
+      :'needs/success'
     else
-      :'share_a_need'
+      :'needs/share'
     end
   end
 
