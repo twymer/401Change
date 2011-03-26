@@ -13,5 +13,12 @@ class Need < ActiveRecord::Base
     !form_values[:description].empty?
   end
   
+  def self.get_errors_with_form(form_values)
+    if(valid?(form_values))
+      return {}
+    else
+      return {:description => "yo dawg, yon description aint got nothin to it"}
+    end
+  end
   
 end

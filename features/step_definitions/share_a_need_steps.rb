@@ -3,8 +3,8 @@ When /^I submit a valid need$/ do
   click_button("Share Need")
 end
 
-Then /^I should have a need$/ do
-  pending # express the regexp above with the code you wish you had
+When /^I submit an invalid need$/ do
+  click_button("Share Need")
 end
 
 Then /^I should get confirmation that sharing succeeded$/ do
