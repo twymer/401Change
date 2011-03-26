@@ -5,7 +5,17 @@ Scenario: Navigate to Share a Need page
   Given I am on the home page
   When I follow "Share a need"
   Then I should be on the share a need page
-  
-Scenario: Description box exists on page
+
+@nyi
+Scenario: I can submit a valid need
   Given I am on the share a need page
-  Then I should see a description
+  When I submit a valid need
+  Then I should get confirmation that sharing succeeded
+  And there should be a need in the database
+
+@nyi
+Scenario: When I share a need with gps location
+  Given I am on the share a need page
+  When I submit a valid need with a gps location
+  Then I should get confirmation that sharing succeeded
+  And there should be a need with a location in the database
