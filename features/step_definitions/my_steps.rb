@@ -1,4 +1,3 @@
-
 Then /^(\w+) should have an error message$/ do | field |
   with_scope('#' + field) do
     page.should have_selector('.error')

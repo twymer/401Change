@@ -1,6 +1,5 @@
 -# Use fake array until models are available
 
 %ul#needs
-- @needs = Need.find(:all)
 - @needs.each do |need|
   %li= need.description

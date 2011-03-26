@@ -27,6 +27,7 @@ class FourOhOneChange < Sinatra::Base
   end
 
   get '/find_a_need' do
+    @needs = Need.find(:all)
     haml :'find_a_need'
   end
 end
