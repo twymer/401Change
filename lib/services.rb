@@ -18,10 +18,11 @@ end
 module ShareANeedService
 
   def self.handle(params)
+    page = ShareNeedPage.new(:view=> :'needs/share', :errors=> Need.get_errors_with_form(params))    
     if(Need.valid?(params)) 
-      Need.create(params)  
+      page.need = Need.create(params)  
     end
-
-    Page.new(:view=> :'needs/share', :errors=> Need.get_errors_with_form(params))    
+    page
   end
 end
+
