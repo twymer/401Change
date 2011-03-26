@@ -1,13 +1,18 @@
 source "http://rubygems.org"
 
+# Sinatra
 gem "sinatra"
+
+#Haml
 gem "haml"
-gem "dm-core"
-gem "dm-migrations"
 gem "rdiscount"
 
+# Database
+gem "activerecord"
+gem "sinatra-activerecord"
+gem "sqlite3"
+
 # testing
-gem "dm-sqlite-adapter"
 gem "cucumber"
 gem "capybara"
 gem "rspec"
