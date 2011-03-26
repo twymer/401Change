@@ -17,19 +17,11 @@ end
 
 module ShareANeedService
 
-  def self.get_view_name(params)
-    if(Need.valid?(params))
-      :'needs/success'
-    else
-      :'needs/share'
-    end
-  end
-
   def self.handle(params)
     if(Need.valid?(params)) 
       Need.create(params)  
     end
 
-    Page.new(:view=> get_view_name(params), :errors=> Need.get_errors_with_form(params))    
+    Page.new(:view=> :'needs/share', :errors=> Need.get_errors_with_form(params))    
   end
 end
