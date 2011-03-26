@@ -1,6 +1,6 @@
 .idea/*
 .bundle/config
 .DS_Store
-test.db
 *.swp
-db/*.db
+*.db
+Gemfile.lock

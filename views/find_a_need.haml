@@ -6,7 +6,6 @@
   %input{:type => 'submit', :value => 'filter', :id => "filterButton"}
 
 %ul#needs
-- @needs = Need.find(:all)
 - @needs.each do |need|
   %li= need.description
 

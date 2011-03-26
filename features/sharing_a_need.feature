@@ -1,4 +1,4 @@
-@wip
+@mwip
 Feature: Sharing a need
   This is a definitioin of the feature
   
@@ -12,6 +12,11 @@ Scenario: I can submit a valid need
   When I submit a valid need
   Then there should be a need in the database
   And I should get confirmation that sharing succeeded
+  
+Scenario: When I submit an invalid need
+  Given I am on the share a need page
+  When I submit an invalid need
+  Then description should have an error message
   
 @nyi
 Scenario: When I share a need with gps location
