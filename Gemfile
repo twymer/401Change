@@ -11,7 +11,10 @@ gem "rdiscount"
 gem "activerecord"
 gem "database_cleaner"
 gem "sinatra-activerecord"
-gem "sqlite3"
+
+group :production do
+  gem "mysql"
+end
 
 # testing
 group :test do
@@ -19,5 +22,5 @@ group :test do
   gem "capybara"
   gem "rspec"
   gem "launchy"
-
+  gem "sqlite3"
 end
