@@ -1,5 +1,6 @@
 require 'page'
 require 'change_agent'
+require 'models'
 
 module ChangeAgentService
   def self.get_view_name(params)
@@ -11,5 +12,16 @@ module ChangeAgentService
   end
   def self.handle(params)
     Page.new(:view=>get_view_name(params), :errors=>ChangeAgent.get_errors_with_form(params))
+  end
+end
+
+module ShareANeedService
+
+
+
+  def self.handle(params)
+    Page.new(:view=> :'success', :errors=> {})
+    
+    
   end
 end

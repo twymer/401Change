@@ -1,3 +1,4 @@
 .idea/*
 .bundle/config
 .DS_Store
+test.db

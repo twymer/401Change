@@ -1,8 +1,7 @@
 require 'sinatra/base'
 require 'haml'
-require 'dm-core'
-require 'dm-migrations'
 require 'services'
+require 'sinatra/activerecord'  
 
 class FourOhOneChange < Sinatra::Base
   get '/' do
