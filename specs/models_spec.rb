@@ -15,6 +15,14 @@ describe Need do
     it "should return false when the description passed is an empty string" do
       Need.valid?({:description => ""}).should == false
     end
+
+    it "should return false when the description contains < so no HTML is allowed" do
+      Need.valid?({:description => "<p>hi</p>"}).should == false
+    end
+
+	  it "should return false when the description is longer than 800 characters" do
+		  Need.valid?({:description => "1"*801}).should == false
+	  end
   
   end
   
