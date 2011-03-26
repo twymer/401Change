@@ -6,6 +6,7 @@ describe ShareANeedService do
 
   before do
     mock(Page)
+    Need.stub!(:create)
     Need.stub!(:get_errors_with_form).and_return({})
     Need.stub!(:valid?).and_return(false)
   end
