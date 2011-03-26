@@ -9,6 +9,7 @@ gem "rdiscount"
 
 # Database
 gem "activerecord"
+gem "database_cleaner"
 gem "sinatra-activerecord"
 gem "sqlite3"
 
