@@ -13,3 +13,6 @@ module ChangeAgentService
     Page.new(:view=>get_view_name(params), :errors=>ChangeAgent.get_errors_with_form(params))
   end
 end
+
+module ShareANeed
+end
