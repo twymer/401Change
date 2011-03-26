@@ -1,9 +1,5 @@
 require 'sinatra/activerecord'
 
-
-
-
-
 class Need < ActiveRecord::Base
   
   def self.valid?(form_values)
