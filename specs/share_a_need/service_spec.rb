@@ -13,13 +13,13 @@ describe ShareANeedService do
 
     it "create a page with the view for share a need succeeded when the form is correctly submitted" do
       Need.stub!(:valid?).and_return(true)
-      Page.should_receive(:new).with({:view=>:"success", :errors=>{}})
+      Page.should_receive(:new).with({:view=>:"needs/success", :errors=>{}})
       ShareANeedService.handle({:description => 'this is a valid description'})
       
     end
     
     it "should return to the share a need page if there is no description" do
-      Page.should_receive(:new).with({:view=>:"share_a_need", :errors=>{}})
+      Page.should_receive(:new).with({:view=>:"needs/share", :errors=>{}})
       ShareANeedService.handle({})     
     end
 
