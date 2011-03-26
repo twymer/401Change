@@ -26,4 +26,10 @@ ActiveRecord::Base.establish_connection :adapter => 'sqlite3', :database => 'db/
 require 'database_cleaner'
 DatabaseCleaner.strategy = :truncation
 
-    # then, whenever you need to clean the DB
+#whenever you need to clean the DB
+#DatabaseCleaner.clean
+
+Before do |scenario|
+	DatabaseCleaner.clean
+end
+
