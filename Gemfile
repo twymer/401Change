@@ -14,7 +14,10 @@ gem "sinatra-activerecord"
 gem "sqlite3"
 
 # testing
-gem "cucumber"
-gem "capybara"
-gem "rspec"
-gem "launchy"
+group :test do
+  gem "cucumber"
+  gem "capybara"
+  gem "rspec"
+  gem "launchy"
+
+end
