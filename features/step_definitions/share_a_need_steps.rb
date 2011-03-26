@@ -15,3 +15,8 @@ end
 Then /^there should be a need in the database$/ do
   Need.find(:all).count.should > 0
 end
+
+Then /^I should get told that sharing failed$/ do
+  page.should have_selector('#sharing_failed')
+  page.should_not have_selector('#sharing_succeeded')
+end

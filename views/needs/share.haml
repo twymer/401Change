@@ -1,4 +1,7 @@
+-if @page.has_errors?
+  %p#sharing_failed Would you look at that! Your need needs a little work. Could you try again?
 %form
+
   %ul
     %li#description
       -if @page.has_error?(:description)
