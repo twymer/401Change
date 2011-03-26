@@ -11,7 +11,12 @@ Scenario:
   Given I am on the find a need page
   Then I should see all the needs
 
+@nyi
 Scenario: 
   Given I am on the find a need page
-  And there is a "feed the homeless" need
+  And the following needs
+  	| description       |
+  	| feed the homeless |
+  	| bring world peace |
   Then I should see a "feed the homeless" need on the list
+  And I should see a "Bring world peace" need on the list
