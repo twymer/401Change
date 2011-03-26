@@ -15,7 +15,6 @@ describe ChangeAgentService do
       ChangeAgent.stub!(:valid?).and_return(true)
       Page.should_receive(:new).with({:view=>:"change_agents/success", :errors=>{}})
       ChangeAgentService.handle({:name => 'John Denver', :email => 'john@denver.com'})
-
     end
     it "returns the view for the change agent page when there are no parameters" do
       Page.should_receive(:new).with({:view=>:"change_agents/join", :errors=>{}})

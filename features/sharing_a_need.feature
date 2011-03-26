@@ -1,3 +1,4 @@
+@wip
 Feature: Sharing a need
   This is a definitioin of the feature
   
@@ -6,7 +7,6 @@ Scenario: Navigate to Share a Need page
   When I follow "Share a need"
   Then I should be on the share a need page
 
-@nyi
 Scenario: I can submit a valid need
   Given I am on the share a need page
   When I submit a valid need

@@ -15,10 +15,22 @@ describe ShareANeedService do
       Need.stub!(:valid?).and_return(true)
       Page.should_receive(:new).with({:view=>:"success", :errors=>{}})
       ShareANeedService.handle({:description => 'this is a valid description'})
+      
     end
     
-    
-  end
+    it "should return to the share a need page if there is no description" do
+      Page.should_receive(:new).with({:view=>:"share_a_need", :errors=>{}})
+      ShareANeedService.handle({})     
+    end
 
+  end
+  
+  describe "saving a need" do
+    it "should save a need when the submitted need is valid" do
+      Need.stub!(:valid?).and_return(true)
+      Need.should_receive(:create).with({:description => "Yarp"})
+      ShareANeedService.handle({:description =>"Yarp"})
+    end
+  end
 
 end
