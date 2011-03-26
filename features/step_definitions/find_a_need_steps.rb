@@ -16,6 +16,7 @@ Then /^there should be a need in the database$/ do
 end
 
 Given /^the following needs$/ do |table|
+	DatabaseCleaner.clean
   # table is a Cucumber::Ast::Table
   table.hashes.each do |hash|
 	  need = Need.create(:description => hash[:description])
