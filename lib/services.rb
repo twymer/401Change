@@ -30,7 +30,7 @@ module ShareAnActionService
     if(Action.valid?(params)) 
       Action.create(params)  
     end
-
+    
     Page.new(:view=> :'actions/share', :errors=> Action.get_errors_with_form(params))    
   end
 end
