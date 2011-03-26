@@ -75,6 +75,8 @@ end
 
 Given /^the following needs$/ do |table|
   # table is a Cucumber::Ast::Table
-  pending # express the regexp above with the code you wish you had
+  table.hashes.each do |hash|
+	  need = Need.create(:description => hash[:description])
+  end
 end
 
