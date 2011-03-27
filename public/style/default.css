@@ -15,7 +15,7 @@ body					{ background: #efefef; display:block; position: relative; height:160%; 
 #nav					{ display:block; width: 230px; margin-top: 20px; float: left;}
 #left-nav				{ margin-top:30px; }
 #left-nav li			{ list-style-type:none; background: transparent url(/images/left-nav-normal.png) no-repeat; margin-left:-47px; display:block; position:relative; width:278px; height:50px; }
-#left-nav li.selected	{ background: transparent url(/images/left-nav-highlight.png) no-repeat !important; }
+/*#left-nav li.selected	{ background: transparent url(/images/left-nav-highlight.png) no-repeat !important; }*/	
 #left-nav li a 			{ display: block; width: 260px; text-align: right; font-weight: bold; color:#fff; font-size: 18px; padding: 6px 10px 0 0; text-decoration:none; }
 
 
@@ -30,7 +30,7 @@ li						{ list-style-type: none; }
 #left-col				{ display: block; float: left; position: relative; width: 50%; }
 #right-col				{ display: block; float: right; position: relative; width: 50%; }
 #map_canvas				{ width: 100%; height: 480px; display: block; background-color:gray; }
-#search					{ width:96.5%; z-index:-999 }
+#search					{ width:80%; z-index:-999 }
 
 .needs-list				{ width: 100%; display: table; margin: 15px 0}
 .needs-list-item		{ width: 100%; line-height: 31px; display: block; padding: 15px 0; border-bottom: 1px solid #b3b3b3; }

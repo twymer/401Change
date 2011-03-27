@@ -5,10 +5,10 @@
     and help someone out.  
     
 
-%form{:onsubmit=>"return filterNeeds()"}
+%form{:class=>"form", :onsubmit=>"return filterNeeds()"}
   %label{:for=>"filterText"} Filter Actions:
-  %input{:type=>"text", :name=>"filterText", :id=>"filterText"}  
-  %input{:type => 'submit', :value => 'filter', :id => "filterButton"}
+  %input{:id=>"search", :type=>"text", :name=>"filterText", :id=>"filterText"}  
+  %input{:class=>"submit", :type => 'submit', :value => 'filter', :id => "filterButton"}
 
 
 %ul#actions

@@ -3,7 +3,6 @@
 -if @page.has_errors?
   %p#sharing_failed Would you look at that! Your need needs a little work. Could you try again?
 %form
-
   %ul
     %li#description
       -if @page.has_error?(:description)
@@ -17,4 +16,4 @@
       %label{:for=>"longitude"}Longitude:
       %input{:name => "longitude"}
     %li
-      %input{:type => 'submit', :value => 'Share Need'}
+      %input{:class => "submit", :type => 'submit', :value => 'Share Need'}
