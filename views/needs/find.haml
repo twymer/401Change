@@ -11,7 +11,7 @@
 
 %ul#needs
 - @needs.each do |need|
-  %li
+  %li{:class=>"need"}
     %a{:href => "/share_an_action/#{need.id}"} I Helped!
     #{need.description}
 
