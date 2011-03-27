@@ -33,6 +33,7 @@ module ShareAnActionService
 							:errors => Action.get_errors_with_form(params))    
 
     if(Action.valid?(params)) 
+      puts "BLAAAAAAAAH"
       page.action = Action.create(params)
     end
     page
