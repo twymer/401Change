@@ -4,7 +4,7 @@ Feature: Sharing a need
   
 Scenario: Navigate to Share a Need page
   Given I am on the home page
-  When I follow "Share a need"
+  When I follow "Share a Need"
   Then I should be on the share a need page
 
 Scenario: I can submit a valid need

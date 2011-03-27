@@ -1,9 +1,9 @@
 Feature: Sharing an action
   This is a definitioin of the feature
 
-Scenario: Navigate to Needs page
+Scenario: Navigate to Actions page
   Given I am on the home page
-  When I follow "Share an action"
+  When I follow "Share an Action"
   Then I should be on the share an action page
 
 Scenario: Navigate from find a need page
