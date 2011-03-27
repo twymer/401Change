@@ -1,7 +1,7 @@
 %h3 There are many needs.  None greater than another.  Your actions change you.  
 %form{:class => "form", :onsubmit=>"return filterNeeds()"}
   %label{:class => "search-label", :for=>"filterText"} Filter Needs:
-  %input{:id => "search", :type=>"text", :name=>"filterText", :id=>"filterText"}  
+  %input{:class => "search", :type=>"text", :name=>"filterText", :id=>"filterText"}  
   %input{:class => "search-button", :type => 'submit', :value => 'Filter', :id => "filterButton"}
 #map_canvas
 .needs-list
