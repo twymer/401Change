@@ -6,12 +6,12 @@
     There are many needs.  
     None greater than another.  
     Your actions change you.  
+
+#map_canvas
 %form{:onsubmit=>"return filterNeeds()"}
   %label{:for=>"filterText"} Filter Needs:
   %input{:type=>"text", :name=>"filterText", :id=>"filterText"}  
   %input{:type => 'submit', :value => 'filter', :id => "filterButton"}
-
-#map_canvas
 %ul#needs
 - @needs.each do |need|
   %li{:class=>"need"}
@@ -23,5 +23,3 @@
 %script{:type=>"text/javascript",:src=>"http://code.google.com/apis/gears/gears_init.js"} 
 %script{:type => "text/javascript",:src  => "/js/need_filter.js"}
 %script{:type=> "text/javascript", :src => "/js/map.js"}  
-%script
-  marker = #{@needs.to_json}
