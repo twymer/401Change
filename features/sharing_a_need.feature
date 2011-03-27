@@ -20,7 +20,6 @@ Scenario: When I submit an invalid need
   Then I should get told that sharing failed
   And description should have an error message
   
-@nyi
 Scenario: When I share a need with gps location
   Given I am on the share a need page
   When I submit a valid need with a gps location

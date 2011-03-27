@@ -10,7 +10,7 @@ describe ShareANeedService do
 
   end
 
-  it "should always send you to the share a need apge" do
+  it "should always send you to the share a need page" do
     page = ShareANeedService.handle({})     
     page.view.should == :"needs/share"
   end
@@ -23,6 +23,11 @@ describe ShareANeedService do
       Need.should_receive(:create).with({:description => "Yarp"})
       ShareANeedService.handle({:description =>"Yarp"})
     end
+	
+	it "should save a need with location data when submitted with it" do
+	  Need.should_receive(:create).with({:description => "Hey", :latitude => 50, :longitude => 35})
+	  ShareANeedService.handle({:description => "Hey", :latitude => 50, :longitude => 35})
+	end
     
     it "the page it creates should have the need on it" do
       Need.stub!(:create).and_return("Yarp")
