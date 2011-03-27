@@ -3,9 +3,12 @@
 %form
   %ul
     %li#description
-    -# if @page.has_error?(:description)  
-    -# %span{:class => 'error'}
-    %label{:for=>"description"}Description:
-    %input{:type => "text", :name => "description"}
+      - if @page.has_error?(:description)  
+        %span{:class => 'error'} The changes you made, reach beyond comprehension. Perhaps type slower?
+        %br
+      %label{:for=>"description"}== What did you do to change the world?
+      %br
+      %textarea{:name=>"description"}
+
     %li
       %input{:type => 'submit', :value => 'Share Action'}

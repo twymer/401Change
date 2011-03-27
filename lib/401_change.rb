@@ -28,7 +28,7 @@ class FourOhOneChange < Sinatra::Base
 
   get '/find_a_need' do
     @needs = Need.find(:all)
-    haml :'find_a_need'
+    haml :'needs/find'
   end
 
   get '/share_an_action/?*' do
