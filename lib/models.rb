@@ -6,6 +6,12 @@ class Need < ActiveRecord::Base
     if (form_values[:description] == nil)
       return false
     end
+		if (form_values[:description].include? "<")
+			return false
+		end
+	  if (form_values[:description].length > 800)
+      return false
+    end
     !form_values[:description].empty?
   end
   
