@@ -50,7 +50,7 @@ function initialize() {
     geocoder = new google.maps.Geocoder();
 
     // we have not specified a marker, so get the user's location.
-    if(marker == null){
+    if(marker == null || marker.length == 0){
         getUserLocation();
     }
     // drop pins on the map
@@ -59,14 +59,16 @@ function initialize() {
         avgLat = 0;
         avgLng = 0;
         for(var n = 0; n< marker.length; n++){
-            var myLatlng = new google.maps.LatLng(marker[n]['need'].lat,marker[n]['need'].lng);
+            var need = marker[n].need
+            var myLatlng = new google.maps.LatLng(need.latitude,need.longitude);
             var mark = new google.maps.Marker({
                 position: myLatlng
                 ,map: map
-                ,title: marker[n]['need'].title
+                ,title: need.description
             });
-            avgLat += marker[n]['need'].lat;
-            avgLng += marker[n]['need'].lng;
+            avgLat += need.latitude;
+            avgLng += need.longitude;
+
 
             mark.markerIndex = n;
 
