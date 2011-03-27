@@ -8,11 +8,13 @@
     %li#description
       -if @page.has_error?(:description)
         %span{:class => 'error'}
-      %label{:for=>"description"}Description:
+      %label{:for=>"description"}Describe your need:
       %br
       %textarea{:name => "description", :rows => "8", :cols => "100", :maxlength => "800"}
     %li#location
+      %label{:for=>"latitude"}Latitude:
       %input{:name => "latitude"}
+      %label{:for=>"longitude"}Longitude:
       %input{:name => "longitude"}
     %li
       %input{:type => 'submit', :value => 'Share Need'}

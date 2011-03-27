@@ -3,7 +3,7 @@ Feature: View all needs page
 
 Scenario: Navigate to Needs page
   Given I am on the share a need
-  When I follow "Find a need"
+  When I follow "Find a Need"
   Then I should be on the find a need page
 
 
