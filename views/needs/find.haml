@@ -22,3 +22,5 @@
 %script{:type=>"text/javascript",:src=>"http://code.google.com/apis/gears/gears_init.js"} 
 %script{:type => "text/javascript",:src  => "/js/need_filter.js"}
 %script{:type=> "text/javascript", :src => "/js/map.js"}  
+:javascript
+  marker = #{@needs.to_json}
