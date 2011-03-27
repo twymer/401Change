@@ -7,7 +7,8 @@ require 'json'
 
 class FourOhOneChange < Sinatra::Base
   get '/' do
-    haml :index
+    @needs = Need.find(:all)
+    haml :'needs/find'
   end
 
   get '/causes/add' do
@@ -26,11 +27,6 @@ class FourOhOneChange < Sinatra::Base
   get '/share_a_need' do
     @page = ShareANeedService.handle(params)
     haml @page.view
-  end
-
-  get '/find_a_need' do
-    @needs = Need.find(:all)
-    haml :'needs/find'
   end
 
   get '/view_actions' do

@@ -1,5 +1,3 @@
-
-
   function filterNeeds(){
     var filterText = $("#filterText").val();
 
