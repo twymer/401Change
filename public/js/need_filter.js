@@ -1,8 +1,11 @@
-$(function() {
+
+
   function filterNeeds(){
-    if($("#filterText").val() != ""){ 
-      $('li.need').filter("li:not(contains("+$("#filterText").val()+"))").css("display","none");
-      $('li.need').filter("li:contains("+$("#filterText").val()+")").css("display","");
+    var filterText = $("#filterText").val();
+
+    if( filterText != ""){ 
+      $('li.need').filter("li:not(contains(\"" + filterText + "\"))").css("display","none");
+      $('li.need').filter("li:contains(\"" + filterText + "\")").css("display","");
     }
     else{
       $('li.need').filter("li").css("display", "");
@@ -13,4 +16,4 @@ $(function() {
   $("#filterText").keyup(function(){
     filterNeeds();
   });
-});
+
