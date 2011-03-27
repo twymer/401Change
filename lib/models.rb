@@ -2,6 +2,11 @@ require 'sinatra/activerecord'
 
 class Need < ActiveRecord::Base
   def self.get_errors_with_form(form_values)
+  
+	if(form_values.size == 0)
+	  return {}
+	end
+  
     description_errors = {}
     location_errors = {}
     if(!isValidDescription(form_values[:description]))
@@ -64,6 +69,9 @@ class Need < ActiveRecord::Base
     is_empty_or_nil(coordinates[:latitude]) && is_empty_or_nil(coordinates[:longitude]) 
   end
 
+
+
+
 end
 
 class Action < ActiveRecord::Base
@@ -76,7 +84,7 @@ class Action < ActiveRecord::Base
   end
   
   def self.get_errors_with_form(form_values)
-    if(valid?(form_values))
+	if(form_values.size == 0 || (valid?(form_values)))
       return {}
     else
       return {:description => "yo dawg, yon description aint got nothin to it"}
