@@ -2,13 +2,10 @@ Feature: View all needs page
   This tests the viewing of all needs
 
 Scenario: Navigate to Needs page
-  Given I am on the home page
-  When I follow "Find a need"
+  Given I am on the share a need
+  When I follow "Find a Need"
   Then I should be on the find a need page
 
-Scenario:
-  Given I am on the find a need page
-  Then I should see all the needs
 
 Scenario: 
   Given the following needs
