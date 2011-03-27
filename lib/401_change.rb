@@ -2,10 +2,13 @@ require 'sinatra/base'
 require 'haml'
 require 'services'
 require 'sinatra/activerecord'  
+require 'json'
+
 
 class FourOhOneChange < Sinatra::Base
   get '/' do
-    haml :index
+    @needs = Need.find(:all)
+    haml :'needs/find'
   end
 
   get '/causes/add' do
@@ -26,9 +29,9 @@ class FourOhOneChange < Sinatra::Base
     haml @page.view
   end
 
-  get '/find_a_need' do
-    @needs = Need.find(:all)
-    haml :'needs/find'
+  get '/view_actions' do
+    @actions = Action.find(:all)
+    haml :'actions/view'
   end
 
   get '/share_an_action/?*' do

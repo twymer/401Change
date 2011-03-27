@@ -1,0 +1,19 @@
+%h2
+  :markdown
+    These people did good.  
+    Please stop sitting on your couch  
+    and help someone out.  
+    
+
+%form{:onsubmit=>"return filterNeeds()"}
+  %label{:for=>"filterText"} Filter Needs:
+  %input{:type=>"text", :name=>"filterText", :id=>"filterText"}  
+  %input{:type => 'submit', :value => 'filter', :id => "filterButton"}
+
+
+%ul#actions
+- @actions.each do |action|
+  %li{:class=>"need"}
+    #{action.description}
+
+%script{:type => "text/javascript",:src  => "/js/need_filter.js"}

@@ -1,4 +1,3 @@
-@wip1
 Feature: Sharing an action
   This is a definitioin of the feature
 

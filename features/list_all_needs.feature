@@ -1,5 +1,5 @@
-Feature: Finding a need
-  This is a definitioin of the feature
+Feature: View all needs page
+  This tests the viewing of all needs
 
 Scenario: Navigate to Needs page
   Given I am on the home page

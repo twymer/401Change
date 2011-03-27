@@ -26,6 +26,8 @@ module NavigationHelpers
         '/find_a_need'
       when /share an action/
         '/share_an_action'
+      when /view actions/
+        '/view_actions'
 
       # Add more mappings here.
       # Here is an example that pulls values out of the Regexp:
