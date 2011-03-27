@@ -31,6 +31,11 @@ class FourOhOneChange < Sinatra::Base
     haml :'needs/find'
   end
 
+  get '/view_actions' do
+    @actions = Action.find(:all)
+    haml :'actions/view'
+  end
+
   get '/share_an_action/?*' do
     @page = ShareAnActionService.handle(params)
     haml @page.view

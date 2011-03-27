@@ -1,18 +1,19 @@
-%h2 
+%h2
   :markdown
-    There are many needs.  
-    None greater than another. 
-    Your actions change you.  
+    These people did good.  
+    Please stop sitting on your couch  
+    and help someone out.  
+    
 
 %form{:onsubmit=>"return filterNeeds()"}
   %label{:for=>"filterText"} Filter Needs:
   %input{:type=>"text", :name=>"filterText", :id=>"filterText"}  
   %input{:type => 'submit', :value => 'filter', :id => "filterButton"}
 
-%ul#needs
-- @needs.each do |need|
+
+%ul#actions
+- @actions.each do |action|
   %li{:class=>"need"}
-    %a{:href => "/share_an_action/#{need.id}"} I Helped!
-    #{need.description}
+    #{action.description}
 
 %script{:type => "text/javascript",:src  => "/js/need_filter.js"}
