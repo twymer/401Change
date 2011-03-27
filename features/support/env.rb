@@ -9,6 +9,7 @@ require 'capybara/cucumber'
 require 'rspec'
 
 Capybara.app = FourOhOneChange
+#Capybara.javascript_driver = :selenium
 
 class FourOhOneChangeWorld
   include Capybara

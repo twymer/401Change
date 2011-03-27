@@ -28,7 +28,7 @@ h3						{ font-size: 1.5em; color: #000 }
 
 #left-col				{ display: block; float: left; position: relative; width: 50%; }
 #right-col				{ display: block; float: right; position: relative; width: 50%; }
-#map					{ width: 100%; height: 480px; display: block; background-color:gray; }
+#map_canvas					{ width: 100%; height: 480px; display: block; background-color:gray; }
 #search					{ width:96.5%; z-index:-999 }
 
 .needs-list				{ width: 100%; display: table; margin: 15px 0}

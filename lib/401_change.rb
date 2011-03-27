@@ -2,6 +2,8 @@ require 'sinatra/base'
 require 'haml'
 require 'services'
 require 'sinatra/activerecord'  
+require 'json'
+
 
 class FourOhOneChange < Sinatra::Base
   get '/' do
