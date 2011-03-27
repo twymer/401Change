@@ -84,7 +84,7 @@ class Action < ActiveRecord::Base
   end
   
   def self.get_errors_with_form(form_values)
-	if(form_values.size == 0 || (valid?(form_values)))
+	if(form_values.size <= 1 || (valid?(form_values)))
       return {}
     else
       return {:description => "yo dawg, yon description aint got nothin to it"}
