@@ -1,4 +1,3 @@
-@wip1
 Feature: Sharing an action
   This is a definitioin of the feature
 
@@ -7,6 +6,7 @@ Scenario: Navigate to Needs page
   When I follow "Share an action"
   Then I should be on the share an action page
 
+@wip1
 Scenario: Navigate from find a need page
   Given the following needs
   	| description       |
@@ -14,7 +14,7 @@ Scenario: Navigate from find a need page
   	| Bring world peace |
   And I am on the find a need page
   When I follow "I helped" for "Feed the homeless"
-  Then I should be on the share an action page
+  Then I should be at any share an action page
   And need should be "Feed the homeless"
   
 @nyi

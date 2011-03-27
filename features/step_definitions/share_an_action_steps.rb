@@ -8,8 +8,9 @@ Then /^there should be an action in the database$/ do
 end
 
 When /^I follow "([^"]*)" for "([^"]*)"$/ do |arg1, arg2|
-  action = Action.find(:description => arg2)
-  visit path_to('/share_an_action/' + action.id)
+  needs = Need.all(:conditions => {:description => arg2})
+  url = '/share_an_action/' + needs[0].id.to_s
+  visit url
 end
 
 @nyi

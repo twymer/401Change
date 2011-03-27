@@ -202,6 +202,16 @@ Then /^(?:|I )should be on (.+)$/ do |page_name|
   end
 end
 
+Then /^(?:|I )should be at any (.+)$/ do |page_name|
+  current_path = '/' + URI.parse(current_url).path.split('/')[1]
+  if current_path.respond_to? :should
+    current_path.should == path_to(page_name)
+    page.driver.response.status.should_not == 404
+  else
+    assert_equal path_to(page_name), current_path
+  end
+end
+
 Then /^(?:|I )should have the following query string:$/ do |expected_pairs|
   query = URI.parse(current_url).query
   actual_params = query ? CGI.parse(query) : {}
