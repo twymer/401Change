@@ -1,8 +1,12 @@
+%h2 
+  :markdown
+    There are many needs.  
+    None greater than another  
+    Your actions change you.  
+
 %form{:onsubmit=>"return filterNeeds()"}
   %label{:for=>"filterText"}Filter by Keyword:
-
-  %input{:type=>"text", :name=>"filterText", :id=>"filterText"}
-  
+  %input{:type=>"text", :name=>"filterText", :id=>"filterText"}  
   %input{:type => 'submit', :value => 'filter', :id => "filterButton"}
 
 %ul#needs
