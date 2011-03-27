@@ -1,11 +1,14 @@
-
+- if !@page.id.nil? and !@page.id.empty?
+  %p== Adding a action to the need with id #{@page.id}
 %form
   %ul
     %li#description
-      -if @page.has_error?(:description)
-        %span{:class => 'error'}
+    -# if @page.has_error?(:description)  
+    -# %span{:class => 'error'}
+
       %label{:for=>"description"} What did you do to change the world?
       %br
       %textarea{:name=>"description"}
+
     %li
       %input{:type => 'submit', :value => 'Share Action'}

@@ -1,6 +1,7 @@
 class Page
   def initialize(page_params)
     @view = page_params[:view]
+    @id = page_params[:id]
     @errors = page_params[:errors] || {}
   end
 
@@ -46,5 +47,9 @@ class ShareActionPage < Page
 
   def action
     @action
+  end
+  
+  def id
+    @id
   end
 end
