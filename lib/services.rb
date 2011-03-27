@@ -27,14 +27,15 @@ end
 
 module ShareAnActionService
   def self.handle(params)
-    need_id = params[:splat][0]
+  	need = nil
+	unless params[:splat][0].nil? or params[:splat][0].empty?
+		need = Need.find(params[:splat][0])
+	end
     page = ShareActionPage.new(:view => :'actions/share', 
-							:need_id => need_id, 
+							:need => need, 
 							:errors => Action.get_errors_with_form(params))    
-
     if(Action.valid?(params)) 
-      puts "BLAAAAAAAAH"
-      page.action = Action.create(params)
+      page.action = Action.create({:description => params[:description], :need_id => params[:splat][0]} )
     end
     page
   end
