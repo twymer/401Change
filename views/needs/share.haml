@@ -9,6 +9,7 @@
       -if @page.has_error?(:description)
         %span{:class => 'error'}
       %label{:for=>"description"}Description:
-      %input{:type=>"text", :name=>"description"}
+      %br
+      %textarea{:name => "description", :rows => "8", :cols => "100", :maxlength => "800"}
     %li
       %input{:type => 'submit', :value => 'Share Need'}
