@@ -1,18 +1,27 @@
+%style{:name=>"viewport", :content=>"initial-scale=1.0, user-scalable=no"}
+  :plain
+    #map_canvas { height: 400px; width:400px; }
 %h2 
   :markdown
     There are many needs.  
-    None greater than another. 
+    None greater than another.  
     Your actions change you.  
-
 %form{:onsubmit=>"return filterNeeds()"}
   %label{:for=>"filterText"} Filter Needs:
   %input{:type=>"text", :name=>"filterText", :id=>"filterText"}  
   %input{:type => 'submit', :value => 'filter', :id => "filterButton"}
 
+#map_canvas
 %ul#needs
 - @needs.each do |need|
   %li{:class=>"need"}
     %a{:href => "/share_an_action/#{need.id}"} I Helped!
     #{need.description}
 
+
+%script{:type=>"text/javascript",:src=>"http://maps.google.com/maps/api/js?sensor=false"}
+%script{:type=>"text/javascript",:src=>"http://code.google.com/apis/gears/gears_init.js"} 
 %script{:type => "text/javascript",:src  => "/js/need_filter.js"}
+%script{:type=> "text/javascript", :src => "/js/map.js"}  
+%script
+  marker = #{@needs.to_json}
