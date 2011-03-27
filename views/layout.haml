@@ -3,37 +3,37 @@
     %link{:rel=>"stylesheet", :href=>"/style/default.css", :type=>"text/css"}
     %script{:type => 'text/javascript', :src=> 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'}
     %title 401Change
-%body
-  #container
-    #header
-      %ul{:id=>"top-links"}
-        %li
-          %a{:class=>"twitter", :href=>"#"}share on twitter
-        %li
-          %a{:class=>"facebook", :href=>"#"}share on facebook
-        %li
-          %a{:href=>"#"}sign in
-        %li
-          %a{:class=>"first", :href=>"#"}about us
-    #nav
-      %a{:id=>"logo-link", :href=>"/"}
-        %img{:alt=>"401 change logo", :id=>"logo-image", :src=>"/images/401-logo.png"}
-      %ul{:id=>"left-nav"}
-        %li{:class=>"selected"}
-          %a{:href=>"/find_a_need"}Find a Need
-        %li
-          %a{:href=>"/share_a_need"}Share a Need
-        %li
-          %a{:href=>"/share_an_action"}Share an Action    
-        %li
-          %a{:href=>"/view_actions"}View Actions
-    #main-content
-      %h1 
-      :markdown
-        Even if it's small /  
-        [Please do something if you can](/find_a_need) /  
-        [We will change the world.](/)  
-      =yield
+  %body
+    #container
+      #header
+        %ul{:id=>"top-links"}
+          %li
+            %a{:class=>"twitter", :href=>"#"}share on twitter
+          %li
+            %a{:class=>"facebook", :href=>"#"}share on facebook
+          %li
+            %a{:href=>"#"}sign in
+          %li
+            %a{:class=>"first", :href=>"#"}about us  
+      #nav
+        %a{:id=>"logo-link", :href=>"/"}
+          %img{:alt=>"401 change logo", :id=>"logo-image", :src=>"/images/401-logo.png"}
+        %ul{:id=>"left-nav"}
+          %li{:class=>"selected"}
+            %a{:href=>"/find_a_need"}Find a Need
+          %li
+            %a{:href=>"/share_a_need"}Share a Need
+          %li
+            %a{:href=>"/share_an_action"}Share an Action    
+          %li
+            %a{:href=>"/view_actions"}View Actions
+      #main-content
+        %h1 
+        :markdown
+          Even if it's small /  
+          [Please do something if you can](/find_a_need) /  
+          [We will change the world.](/)  
+        =yield
       
 
       
