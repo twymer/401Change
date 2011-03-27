@@ -1,12 +1,8 @@
-%h2 
-  :markdown
-    There are many needs.  
-    None greater than another.  
-    Your actions change you.  
+%h3 There are many needs.  None greater than another.  Your actions change you.  
 %form{:onsubmit=>"return filterNeeds()"}
   %label{:for=>"filterText"} Filter Needs:
   %input{:type=>"text", :name=>"filterText", :id=>"filterText"}  
-  %input{:type => 'submit', :value => 'filter', :id => "filterButton"}
+  %input{:class=>"submit", :type => 'submit', :value => 'filter', :id => "filterButton"}
 #map_canvas
 .needs-list
   - @needs.each do |need|

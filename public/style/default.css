@@ -2,11 +2,10 @@
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td
 { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
-
-html					{ height:100%; }
-body					{ background: #efefef; display:block; position: relative; height:110%; font: 10px arial, helvetica, Sans-Serif; color:#939598; }
+html					{ height:100% }
+body					{ background: #efefef; display:block; position: relative; height:160%; font: 10px arial, helvetica, Sans-Serif; color:#939598; }
 #container				{ display: block; position:relative; clear: both; width: 76.8%; height:100%; min-width:860px; max-width:960px; margin: 0px auto 0 auto; padding: 25px; background-color:#ffffff; border-left: 1px #cccccc solid; border-right: 1px #cccccc solid; }
-#main-content			{ width: 73%; display: block; float: right; font-size: 1.6em; }
+#main-content			{ width: 73%; display: block; float: right; font-size: 1.6em; height:100%; position:relative;}
 #logo-link				{ margin-left: -85px; text-decoration:none; }
 #logo-image				{ margin-top:-30px; }
 #top-links li			{ font-size: 1.1em; display: inline; float: right; padding: 0 12px; line-height:1.2em; }
@@ -16,19 +15,21 @@ body					{ background: #efefef; display:block; position: relative; height:110%; 
 #nav					{ display:block; width: 230px; margin-top: 20px; float: left;}
 #left-nav				{ margin-top:30px; }
 #left-nav li			{ list-style-type:none; background: transparent url(../images/left-nav-normal.png) no-repeat; margin-left:-47px; display:block; position:relative; width:278px; height:50px; }
-#left-nav li .selected	{ background: transparent url(../images/left-nav-selected.png) no-repeat; }
+#left-nav li.selected	{ background: transparent url(../images/left-nav-highlight.png) no-repeat !important; }
 #left-nav li a 			{ display: block; width: 260px; text-align: right; font-weight: bold; color:#fff; font-size: 18px; padding: 6px 10px 0 0; text-decoration:none; }
 
 
 /*sarah styles*/
-input					{ line-height: 1.6em; font-size: 16px; padding: 8px; color: #b3b3b3; }
+input					{ line-height: 1.6em; font-size: 16px; padding: 8px; color: #969696; }
 h1						{ font-size: 3em; color: #000; margin: 40px 0 6px 0; }
-h2						{ font-size: 2em; color: #969696 }
+h2						{ font-size: 2em; color: #969696; margin: 20px 0; }
 h3						{ font-size: 1.5em; color: #000 }
+textarea				{ margin: 10px 0 0 0; padding:2px 5px; width:100%; }
+li						{ list-style-type: none; }
 
 #left-col				{ display: block; float: left; position: relative; width: 50%; }
 #right-col				{ display: block; float: right; position: relative; width: 50%; }
-#map_canvas					{ width: 100%; height: 480px; display: block; background-color:gray; }
+#map_canvas				{ width: 100%; height: 480px; display: block; background-color:gray; }
 #search					{ width:96.5%; z-index:-999 }
 
 .needs-list				{ width: 100%; display: table; margin: 15px 0}
@@ -40,3 +41,6 @@ h3						{ font-size: 1.5em; color: #000 }
 .search-label			{ display: none; }
 .helped-button			{ background: transparent url(../images/blue-button.png) no-repeat; height: 31px; width: 107px; display: block; position: relative; font-size: 16px; font-weight: bold; color:#fff; text-align: center; text-decoration: none; padding-top: 1px; }
 .form					{ width: 100%; display:table; margin-bottom: 15px; }
+.clear					{ height:1px; clear:both; }
+.submit, button			{ display:block; position:relative; font-size:13px; color:#f9f7f2; padding: 4px 8px; margin:10px 0 0 0;
+					  	  background-color:#0071BC; cursor: pointer; border:none; clear:both; float:right; }
