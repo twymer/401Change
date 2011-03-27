@@ -17,7 +17,6 @@ Scenario: Navigate from find a need page
   Then I should be at any share an action page
   And need should be "Feed the homeless"
   
-@nyi
 Scenario: I can submit a valid action
   Given I am on the share an action page
   When I submit a valid action
