@@ -59,14 +59,14 @@ function initialize() {
         avgLat = 0;
         avgLng = 0;
         for(var n = 0; n< marker.length; n++){
-            var myLatlng = new google.maps.LatLng(marker[n].lat,marker[n].lng);
+            var myLatlng = new google.maps.LatLng(marker[n]['need'].lat,marker[n]['need'].lng);
             var mark = new google.maps.Marker({
                 position: myLatlng
                 ,map: map
-                ,title: marker[n].title
+                ,title: marker[n]['need'].title
             });
-            avgLat += marker[n].lat;
-            avgLng += marker[n].lng;
+            avgLat += marker[n]['need'].lat;
+            avgLng += marker[n]['need'].lng;
 
             mark.markerIndex = n;
 
