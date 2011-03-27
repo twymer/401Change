@@ -10,7 +10,7 @@ Then /^I should see all the needs$/ do
 end
 
 Then /^I should see a "([^"]*)" need on the list$/ do |arg1|
-    page.should have_selector("li", :text => arg1)
+    page.should have_content(arg1)
 end
 
 Then /^I should be able to see all the needs on the map$/ do
