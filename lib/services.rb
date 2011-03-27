@@ -16,12 +16,21 @@ module ChangeAgentService
 end
 
 module ShareANeedService
-
   def self.handle(params)
+    page = ShareNeedPage.new(:view=> :'needs/share', :errors=> Need.get_errors_with_form(params))    
     if(Need.valid?(params)) 
-      Need.create(params)  
+      page.need = Need.create(params)  
     end
+    page
+  end
+end
 
-    Page.new(:view=> :'needs/share', :errors=> Need.get_errors_with_form(params))    
+module ShareAnActionService
+  def self.handle(params)
+    page = ShareActionPage.new(:view=> :'actions/share', :errors=> Action.get_errors_with_form(params))    
+    if(Action.valid?(params)) 
+      page.action = Action.create(params)  
+    end
+    page
   end
 end

@@ -16,3 +16,35 @@ class Page
     @errors.has_key?(field_name)
   end
 end
+
+class ShareNeedPage < Page
+  @need
+
+  def succeeded? 
+    (@need != nil) && !has_errors?
+  end 
+  
+  def need=(n)
+    @need = n
+  end
+
+  def need
+    @need
+  end
+end
+
+class ShareActionPage < Page
+  @action
+
+  def succeeded? 
+    (@action != nil) && !has_errors?
+  end 
+  
+  def action=(n)
+    @action = n
+  end
+
+  def action
+    @action
+  end
+end

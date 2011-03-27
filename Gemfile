@@ -11,10 +11,16 @@ gem "rdiscount"
 gem "activerecord"
 gem "database_cleaner"
 gem "sinatra-activerecord"
-gem "sqlite3"
+
+group :production do
+  gem "mysql"
+end
 
 # testing
-gem "cucumber"
-gem "capybara"
-gem "rspec"
-gem "launchy"
+group :test do
+  gem "cucumber"
+  gem "capybara"
+  gem "rspec"
+  gem "launchy"
+  gem "sqlite3"
+end

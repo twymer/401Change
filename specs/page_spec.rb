@@ -49,6 +49,18 @@ describe Page do
       page.has_errors?.should == true
     end
   end
+end
 
+describe ShareNeedPage do
 
+  it "says it does not succeed if there are errors" do
+    page = ShareNeedPage.new({:errors => {:email=>"yarp"}})
+    page.need = "blarp"
+    page.succeeded?.should == false
+  end
+  it "Says it does succeed if there is a need and no errors" do
+    page = ShareNeedPage.new({})
+    page.need = "blary"
+    page.succeeded?.should == true
+  end
 end
