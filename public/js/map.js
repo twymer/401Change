@@ -247,6 +247,6 @@ function updateMarkerTitle(e){
  * Navigate to the page corresponding to the clicked marker.  
  */
 function viewObject(){
-//     this = marker
-    window.location='someting?id='+marker[this.markerIndex];
+//      this = marker
+//      window.location='someting?id='+marker[this.markerIndex];
 }
