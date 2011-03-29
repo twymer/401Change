@@ -7,7 +7,7 @@ require 'json'
 
 class FourOhOneChange < Sinatra::Base
   get '/' do
-    @needs = Need.find(:all)
+    @needs = Need.order('id DESC').find(:all)
     haml :'needs/find'
   end
 
@@ -30,7 +30,7 @@ class FourOhOneChange < Sinatra::Base
   end
 
   get '/view_actions' do
-    @actions = Action.find(:all)
+    @actions = Action.order('id DESC').find(:all)
     haml :'actions/view'
   end
 
