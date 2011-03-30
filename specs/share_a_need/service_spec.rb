@@ -1,13 +1,11 @@
 require 'rspec'
 require 'services'
 
-
 describe ShareANeedService do
 
   before do
     Need.stub!(:create)
     Need.stub!(:get_errors_with_form).and_return({})
-
   end
 
   it "should always send you to the share a need page" do
@@ -34,7 +32,6 @@ describe ShareANeedService do
       page = ShareANeedService.handle({:description => "Yarp"})
       page.need.should == "Yarp"
     end
-  
   end
   
   describe "When the need is invalid" do
@@ -50,7 +47,6 @@ describe ShareANeedService do
       ShareNeedPage.should_receive(:new).with({:errors => {:description => "aaeeerooosmitherror"}, :view => :"needs/share"})
       ShareANeedService.handle({});
     end
-
   end
 
 end

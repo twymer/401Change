@@ -32,7 +32,7 @@ module ShareAnActionService
 		need = Need.find(params[:splat][0])
 	end
     page = ShareActionPage.new(:view => :'actions/share', 
-							:need => need, 
+							:need_id => need, 
 							:errors => Action.get_errors_with_form(params))    
     if(Action.valid?(params)) 
       page.action = Action.create({:description => params[:description], :need_id => params[:splat][0]} )
