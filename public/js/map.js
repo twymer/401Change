@@ -66,6 +66,7 @@ function initialize() {
                 ,map: map
                 ,title: need.description
             });
+            marker.id = need.id;
             avgLat += need.latitude;
             avgLng += need.longitude;
 
@@ -248,5 +249,5 @@ function updateMarkerTitle(e){
  */
 function viewObject(){
 //      this = marker
-//      window.location='someting?id='+marker[this.markerIndex];
+        window.location='share_an_action/'+marker.id;
 }
