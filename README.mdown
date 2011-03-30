@@ -1,0 +1,58 @@
+Description
+===========
+
+401Change started out as the idea of Zach Spencer. The project was accepted to Lansing Givecamp 2011 (3/25/11-3/27/11). Here a small team made a lot of initial progress to the project.
+
+The site is live at http://401change.org.
+
+The general premise is that people should be able to share and discuss the needs they see in the world and the actions they do to improve these and make the world a better place. Much work remains to fully realize the goals of the project and essentially it is in a very very early alpha.
+
+
+To Contribute
+=============
+
+To launch the project using shotgun:
+ * cd /Wherever/You/Copied/It/To
+ * gem install bundler
+ * gem install shotgun
+ * bundler install
+ * shotgun
+
+
+
+The project leverages the following technologies:
+  * Ruby
+  * Sinatra
+  * ActiveRecord
+  * Haml
+  * RSpec/Cucumber/Capybara for testing.
+
+
+Boring Copyright Information I May Remove
+=========================================
+
+Copyright 2011 Zachary Spencer. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are
+permitted provided that the following conditions are met:
+
+   1. Redistributions of source code must retain the above copyright notice, this list of
+      conditions and the following disclaimer.
+
+   2. Redistributions in binary form must reproduce the above copyright notice, this list
+      of conditions and the following disclaimer in the documentation and/or other materials
+      provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY Zachary Spencer ``AS IS'' AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Zachary Spencer OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The views and conclusions contained in the software and documentation are those of the
+authors and should not be interpreted as representing official policies, either expressed
+or implied, of Zachary Spencer.
