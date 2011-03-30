@@ -2,7 +2,7 @@
   %p#sharing_succeeded Thank you for sharing. Knowing is half the battle. Now go fight the fight.
 -if @page.has_errors?
   %p#sharing_failed Would you look at that! Your need needs a little work. Could you try again?
-- if !@page.need_id.nil? and !@page.need_id.empty?
+- if !@page.need_id.nil?
   %p== Adding a action to the need with id #{@page.need_id}
 %form
   %ul
