@@ -7,9 +7,10 @@
   %input{:class=>"submit", :type => 'submit', :value => 'filter', :id => "filterButton"}
 
 
-%ul#actions
+.filterable-list
 - @actions.each do |action|
-  %li{:class=>"need"}
-    #{action.description}
+  .filterable-list-item
+    .needs-list-left
+      #{action.description}
 
-%script{:type => "text/javascript",:src  => "/js/need_filter.js"}
+%script{:type => "text/javascript",:src  => "/js/item_filter.js"}
