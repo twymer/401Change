@@ -1,6 +1,6 @@
 @mwip
 Feature: Sharing a need
-  This is a definitioin of the feature
+  This is a definition of the feature
   
 Scenario: Navigate to Share a Need page
   Given I am on the home page
@@ -25,3 +25,9 @@ Scenario: When I share a need with gps location
   When I submit a valid need with a gps location
   Then I should get confirmation that sharing succeeded
   And there should be a need with a location in the database
+
+@nyi
+Scenario: Sharing a need with an address
+  Given I am on the share a need page
+  When I submit a valid need with a real address
+  Then there should be a need with the addresses location in the database

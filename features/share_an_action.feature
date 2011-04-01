@@ -21,5 +21,3 @@ Scenario: I can submit a valid action
   When I submit a valid action
   Then there should be an action in the database
   And I should get confirmation that sharing succeeded
-  
-
