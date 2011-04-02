@@ -1,26 +1,23 @@
-source "http://rubygems.org"
+source :rubygems
 
-# Sinatra
-gem "sinatra"
+# Project requirements
+gem 'rake'
+gem 'rack-flash'
+gem 'thin' # or mongrel
 
-#Haml
-gem "haml"
-gem "rdiscount"
+# Component requirements
+gem 'haml'
+gem 'activerecord', :require => "active_record"
+gem 'sqlite3-ruby', :require => "sqlite3"
 
-# Database
-gem "activerecord"
-gem "database_cleaner"
-gem "sinatra-activerecord"
+# Test requirements
+gem 'rspec', :group => "test"
+gem 'rack-test', :require => "rack/test", :group => "test"
 
-group :production do
-  gem "mysql"
-end
 
-# testing
-group :test do
-  gem "cucumber"
-  gem "capybara"
-  gem "rspec"
-  gem "launchy"
-  gem "sqlite3"
-end
+# Padrino
+gem 'padrino', "0.9.23"
+
+# NEW ORGANIZE ME
+gem "capybara"
+gem "cucumber"

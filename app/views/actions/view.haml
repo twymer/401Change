@@ -1,0 +1,16 @@
+%h3 These people did good /  Please stop sitting on your couch / and help someone out.  
+    
+
+%form{:class=>"form", :onsubmit=>"return filterNeeds()"}
+  %label{:for=>"filterText"} Filter Actions:
+  %input{:id=>"search", :type=>"text", :name=>"filterText", :id=>"filterText"}  
+  %input{:class=>"submit", :type => 'submit', :value => 'filter', :id => "filterButton"}
+
+
+.filterable-list
+- @actions.each do |action|
+  .filterable-list-item
+    .needs-list-left
+      #{action.description}
+
+%script{:type => "text/javascript",:src  => "/js/item_filter.js"}

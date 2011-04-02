@@ -1,0 +1,19 @@
+-if @page.succeeded?
+  %p#sharing_succeeded Thank you for sharing. Knowing is half the battle. Now go fight the fight.
+-if @page.has_errors?
+  %p#sharing_failed Would you look at that! Your need needs a little work. Could you try again?
+%form
+  %ul
+    %li#description
+      -if @page.has_error?(:description)
+        %span{:class => 'error'}
+      %label{:for=>"description"}Describe your need:
+      %br
+      %textarea{:name => "description", :rows => "8", :cols => "100", :maxlength => "800"}
+    %li#location
+      %label{:for=>"latitude"}Latitude:
+      %input{:name => "latitude"}
+      %label{:for=>"longitude"}Longitude:
+      %input{:name => "longitude"}
+    %li
+      %input{:class => "submit", :type => 'submit', :value => 'Share Need'}

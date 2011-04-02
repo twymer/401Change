@@ -1,0 +1,18 @@
+-if @page.succeeded?
+  %p#sharing_succeeded Thank you for sharing. Knowing is half the battle. Now go fight the fight.
+-if @page.has_errors?
+  %p#sharing_failed Would you look at that! Your need needs a little work. Could you try again?
+- if !@page.need_id.nil?
+  %p== Adding a action to the need with id #{@page.need_id}
+%form
+  %ul
+    %li#description
+      - if @page.has_error?(:description)  
+        %span{:class => 'error'} The changes you made, reach beyond comprehension. Perhaps type slower?
+        %br
+      %label{:for=>"description"}== What did you do to change the world?
+      %br
+      %textarea{:name=>"description"}
+
+    %li
+      %input{:class=>"submit", :type => 'submit', :value => 'Share Action'}
