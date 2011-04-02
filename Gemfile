@@ -1,4 +1,4 @@
-source :rubygems
+source :gemcutter
 
 # Project requirements
 gem 'rake'

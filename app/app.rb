@@ -1,5 +1,4 @@
 class Forchange < Padrino::Application
-  register SassInitializer
   register Padrino::Mailer
   register Padrino::Helpers
 
