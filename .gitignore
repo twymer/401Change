@@ -4,4 +4,5 @@ db/config.yml
 .DS_Store
 *.swp
 *.db
+ruby/*
 Gemfile.lock
