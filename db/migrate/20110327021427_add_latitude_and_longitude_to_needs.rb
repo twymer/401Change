@@ -1,7 +1,7 @@
 class AddLatitudeAndLongitudeToNeeds < ActiveRecord::Migration
   def self.up
-	add_column :needs, :latitude, :real
-	add_column :needs, :longitude, :real
+	add_column :needs, :latitude, :double
+	add_column :needs, :longitude, :double
   end
 
   def self.down

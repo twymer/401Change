@@ -17,7 +17,10 @@ ActiveRecord::Schema.define(:version => 20110327021427) do
     t.integer "need_id"
   end
 
-# Could not dump table "needs" because of following StandardError
-#   Unknown type 'real' for column 'latitude'
+  create_table "needs", :force => true do |t|
+    t.string "description"
+    t.float  "latitude"
+    t.float  "longitude"
+  end
 
 end
